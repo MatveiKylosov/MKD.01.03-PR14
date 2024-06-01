@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#0097ff">
+
+    <TextView
+        android:layout_marginTop="160dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Шаг №3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+        android:textSize="40dp"/>
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Чему Вы готовы уделить большее внимание"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Спина"
+            android:textColor="@color/white"
+            android:id="@+id/Back"
+            />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Бицепсы"
+            android:textColor="@color/white"
+            android:id="@+id/Biceps"
+            />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Трицепсы"
+            android:textColor="@color/white"
+            android:id="@+id/Triceps"
+            />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="икроножные мышцы"
+            android:textColor="@color/white"
+            android:id="@+id/Calf"
+            />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/button"
+        android:textColor="#0097ff"
+        android:text="Продолжить"
+        android:onClick="GoToFour"
+        />
+</LinearLayout>
