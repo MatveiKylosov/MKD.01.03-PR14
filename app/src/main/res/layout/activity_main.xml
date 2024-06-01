@@ -37,10 +37,10 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
         android:layout_marginTop="160dp"
+        android:layout_marginRight="15dp"
         android:background="@drawable/button"
-        android:textColor="#0097ff"
+        android:onClick="GoToReg"
         android:text="Начать"
-        />
+        android:textColor="#0097ff" />
 </LinearLayout>

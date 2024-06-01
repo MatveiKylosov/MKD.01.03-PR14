@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="ВИДЫ ТРЕНИРОВОК"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="#0097ff"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"/>
+
+    <FrameLayout
+        android:id="@+id/FrameBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/back"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Спина"
+            android:layout_gravity="bottom"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="26dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="15dp"
+            />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/FrameBiceps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/biceps"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Бицепсы"
+            android:layout_gravity="bottom"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="26dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="15dp"
+            />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/FrameTriceps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/triceps"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Трицепсы"
+            android:layout_gravity="bottom"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="26dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="15dp"
+            />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/FrameCalf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/calf"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Икроножные мышцы"
+            android:layout_gravity="bottom"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="26dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="15dp"
+            />
+    </FrameLayout>
+</LinearLayout>

@@ -79,8 +79,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:textColor="@color/white"
-            android:textSize="14dp"
-            android:id="@+id/Height"/>
+            android:textSize="14dp" />
 
         <EditText
             android:layout_marginTop="15dp"
@@ -89,6 +88,7 @@
             android:textColor="@color/black"
             android:paddingLeft="15dp"
             android:background="@drawable/button"
+            android:id="@+id/Height"
             />
     </LinearLayout>
 
