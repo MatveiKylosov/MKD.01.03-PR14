@@ -12,7 +12,7 @@
         android:layout_marginTop="160dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Шаг №2"
+        android:text="Шаг №5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,6 +72,6 @@
         android:background="@drawable/button"
         android:textColor="#0097ff"
         android:text="Продолжить"
-        android:id="@+id/GoToMain"
+        android:onClick="GoToMain"
         />
 </LinearLayout>

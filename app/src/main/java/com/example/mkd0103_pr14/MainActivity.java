@@ -1,11 +1,14 @@
 package com.example.mkd0103_pr14;
 //https://github.com/b1narygl1tch/kali-linux-pitail-setup
 //https://habr.com/ru/articles/535290/
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.style.SuggestionRangeSpan;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
@@ -75,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         setContentView(R.layout.step_three);
-
+        Muscles = new CheckBox[4];
         Muscles[0] = findViewById(R.id.Back);
         Muscles[1] = findViewById(R.id.Biceps);
         Muscles[2] = findViewById(R.id.Triceps);
@@ -93,24 +96,73 @@ public class MainActivity extends AppCompatActivity {
         Weight = findViewById(R.id.Weight);
         Height = findViewById(R.id.Height);
     }
-    public void GoToFive(View view){
-        String Weight = this.Weight.getText().toString();
-        String Height = this.Height.getText().toString();
+    public void GoToFive(View view) {
+        String weightStr = this.Weight.getText().toString();
+        String heightStr = this.Height.getText().toString();
 
-        if(Weight.isEmpty() || Height.isEmpty())
-        {
+        if (weightStr.isEmpty() || heightStr.isEmpty()) {
             AlertDialog("Ошибка!", "Необходимо заполнить все данные.");
+            return;
+        }
+
+        try {
+            double weight = Double.parseDouble(weightStr);
+            double height = Double.parseDouble(heightStr);
+        } catch (NumberFormatException e) {
+            AlertDialog("Ошибка!", "Вес и рост должны быть числовыми значениями.");
             return;
         }
 
         setContentView(R.layout.step_five);
         Gender = findViewById(R.id.Gender);
     }
+
     public void GoToMain(View view){
-        setContentView(R.layout.main);
         if(Gender.getCheckedRadioButtonId() == -1){
             AlertDialog("Ошибка!", "Необходимо указать пол.");
             return;
         }
+        setContentView(R.layout.main);
+
+        if(!Muscles[0].isChecked()){
+            FrameLayout fl = findViewById(R.id.FrameBack);
+            fl.setVisibility(View.GONE);
+        }
+
+        if(!Muscles[1].isChecked()){
+            FrameLayout fl = findViewById(R.id.FrameBiceps);
+            fl.setVisibility(View.GONE);
+        }
+
+        if(!Muscles[2].isChecked()){
+            FrameLayout fl = findViewById(R.id.FrameTriceps);
+            fl.setVisibility(View.GONE);
+        }
+
+        if(!Muscles[3].isChecked()){
+            FrameLayout fl = findViewById(R.id.FrameCalf);
+            fl.setVisibility(View.GONE);
+        }
+    }
+
+    public void GoToBack(View view){
+        String youtubeUrl = "https://www.youtube.com/watch?v=qBySr6Bt0B8&ab_channel=UtopiaShow"; // Замените URL на нужный
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(youtubeUrl));
+        startActivity(browserIntent);
+    }
+    public void GoToTriceps(View view){
+        String youtubeUrl = "https://www.youtube.com/watch?v=example"; // Замените URL на нужный
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(youtubeUrl));
+        startActivity(browserIntent);
+    }
+    public void GoToBiceps(View view){
+        String youtubeUrl = "https://www.youtube.com/watch?v=-HGihUGl5zM&ab_channel=SJBody"; // Замените URL на нужный
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(youtubeUrl));
+        startActivity(browserIntent);
+    }
+    public void GoToCalf(View view){
+        String youtubeUrl = "https://www.youtube.com/watch?v=9oiitGOZWbA&ab_channel=ВикторБлуд"; // Замените URL на нужный
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(youtubeUrl));
+        startActivity(browserIntent);
     }
 }
