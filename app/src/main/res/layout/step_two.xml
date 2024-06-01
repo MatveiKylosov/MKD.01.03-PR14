@@ -41,29 +41,32 @@
         android:layout_height="wrap_content"
         android:id="@+id/NumberofLessons">
         <RadioButton
+            android:id="@+id/oncePerDayRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Раз в день"
-            android:textColor="@color/white"
-            />
+            android:textColor="@color/white" />
+
         <RadioButton
+            android:id="@+id/threeTimesPerWeekRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Три раза в неделю"
-            android:textColor="@color/white"
-            />
+            android:textColor="@color/white" />
+
         <RadioButton
+            android:id="@+id/twoTimesPerWeekRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Два раза в неделю"
-            android:textColor="@color/white"
-            />
+            android:textColor="@color/white" />
+
         <RadioButton
+            android:id="@+id/oncePerWeekRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Раз в неделю"
-            android:textColor="@color/white"
-            />
+            android:textColor="@color/white" />
     </RadioGroup>
 
     <androidx.appcompat.widget.AppCompatButton

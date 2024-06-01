@@ -34,34 +34,37 @@
         android:gravity="center"/>
 
     <RadioGroup
-        android:layout_marginTop="60dp"
+        android:id="@+id/ChoiceGender"
         android:layout_width="match_parent"
-        android:layout_marginRight="25dp"
-        android:layout_marginLeft="25dp"
         android:layout_height="wrap_content"
-        android:id="@+id/Gender">
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="60dp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="Ваш пол:"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             android:textColor="@color/white"
-            android:textSize="14dp"
-            android:gravity="center"/>
+            android:textSize="14dp" />
+
         <RadioButton
+            android:id="@+id/maleRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Мужской"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white" />
+
         <RadioButton
+            android:id="@+id/femaleRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Женский"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white" />
     </RadioGroup>
+
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"
@@ -73,5 +76,16 @@
         android:textColor="#0097ff"
         android:text="Продолжить"
         android:onClick="GoToMain"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:onClick="SkipToMain"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button"
+        android:textColor="#0097ff"
+        android:text="Пропустить"
         />
 </LinearLayout>

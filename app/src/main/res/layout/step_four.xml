@@ -97,10 +97,21 @@
         android:layout_height="50dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="130dp"
         android:background="@drawable/button"
         android:textColor="#0097ff"
         android:text="Продолжить"
         android:onClick="GoToFive"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:onClick="SkipToFive"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button"
+        android:textColor="#0097ff"
+        android:text="Пропустить"
         />
 </LinearLayout>
