@@ -1,6 +1,4 @@
 package com.example.mkd0103_pr14;
-//https://github.com/b1narygl1tch/kali-linux-pitail-setup
-//https://habr.com/ru/articles/535290/
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -66,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
         Name = findViewById(R.id.Name);
         Surname = findViewById(R.id.Surname);
     }
-
 
     public void GoToTwo(View view){
         String name = Name.getText().toString();
@@ -176,6 +173,27 @@ public class MainActivity extends AppCompatActivity {
         }
 
         setContentView(R.layout.main);
+
+        if (!StrMuscles.contains("спину")) {
+            FrameLayout frameLayout = findViewById(R.id.FrameBack);
+            frameLayout.setVisibility(View.GONE);
+        }
+
+        if (!StrMuscles.contains("бицепсы")) {
+            FrameLayout frameLayout = findViewById(R.id.FrameBiceps);
+            frameLayout.setVisibility(View.GONE);
+        }
+
+        if (!StrMuscles.contains("трицепсы")) {
+            FrameLayout frameLayout = findViewById(R.id.FrameTriceps);
+            frameLayout.setVisibility(View.GONE);
+        }
+
+        if (!StrMuscles.contains("икроножные мышцы")) {
+            FrameLayout frameLayout = findViewById(R.id.FrameCalf);
+            frameLayout.setVisibility(View.GONE);
+        }
+
         AlertDialog("Итоговая информация:", StrName + StrNumberOfLessons + StrMuscles + StrHeightNWeight);
     }
 
@@ -202,6 +220,27 @@ public class MainActivity extends AppCompatActivity {
     public void SkipToMain(View view)
     {
         setContentView(R.layout.main);
+
+        if (!StrMuscles.contains("спину")) {
+            FrameLayout frameLayout = findViewById(R.id.FrameBack);
+            frameLayout.setVisibility(View.GONE);
+        }
+
+        if (!StrMuscles.contains("бицепсы")) {
+            FrameLayout frameLayout = findViewById(R.id.FrameBiceps);
+            frameLayout.setVisibility(View.GONE);
+        }
+
+        if (!StrMuscles.contains("трицепсы")) {
+            FrameLayout frameLayout = findViewById(R.id.FrameTriceps);
+            frameLayout.setVisibility(View.GONE);
+        }
+
+        if (!StrMuscles.contains("икроножные мышцы")) {
+            FrameLayout frameLayout = findViewById(R.id.FrameCalf);
+            frameLayout.setVisibility(View.GONE);
+        }
+
         AlertDialog("Итоговая информация:", StrName + StrNumberOfLessons + StrMuscles + StrHeightNWeight);
     }
 
@@ -213,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void GoToTriceps(View view){
-        String youtubeUrl = "https://www.youtube.com/watch?v=example";
+        String youtubeUrl = "https://youtu.be/ELawhgw5snc?si=nDB5ZWf1vOFnG0XG";
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(youtubeUrl));
         startActivity(browserIntent);
     }
